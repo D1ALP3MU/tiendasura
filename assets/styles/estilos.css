@@ -1,5 +1,5 @@
 .banner{
-    background-image: url("../img/computadorhd.png");
+    background-image: url("../img/imgbanner.png");
     padding: 15% 30% 25% 8%;
     background-size: cover;
     background-position: top center;
@@ -23,5 +23,4 @@
     font-family: 'Delius', cursive;
     font-family: 'Just Another Hand', cursive;
     font-family: 'Kalam', cursive;
-    color:white;
 }
