@@ -108,7 +108,7 @@ productos.forEach(function(producto){
     precio.textContent = ("$" + producto.precio)
 
     //Crear popularidad
-    let popularidad = document.createElement("h2")
+    let popularidad = document.createElement("h4")
     popularidad.classList.add("fw-bold")
     popularidad.textContent = (producto.popularidad)
     
@@ -116,7 +116,7 @@ productos.forEach(function(producto){
     let descripcion = document.createElement("p")
     descripcion.classList.add("text-danger", "d-none")
     descripcion.textContent = producto.descripcion
-  
+    
     //Definiendo padres e hijos
     tarjeta.appendChild(imagen)
     tarjeta.appendChild(nombre)
