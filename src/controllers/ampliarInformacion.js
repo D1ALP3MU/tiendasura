@@ -8,10 +8,15 @@ contenedorProductos.addEventListener("click", function(evento){
         informacionProducto.precio = (evento.target.parentElement.querySelector("h2").textContent)
         informacionProducto.popularidad = (evento.target.parentElement.querySelector("h4").textContent)
         informacionProducto.descripcion = (evento.target.parentElement.querySelector("p").textContent)
+        informacionProducto.foto = (evento.target.parentElement.querySelector("img").src)
 
         //Guardando un archivo en memoria
         //siempre que vaya a guardar en la memoria un objeto o un arreglo debo poner la siguiente instrucción
-        localStorage.setItem(JSON.stringify("producto", informacionProducto))
+        localStorage.setItem("producto", JSON.stringify(informacionProducto))
+
+        //Error que se puede cometer
+        //localStorage.setItem(JSON.stringify("producto", informacionProducto))
+
 
         window.location.href = "./ampliarInfo.html"
         
