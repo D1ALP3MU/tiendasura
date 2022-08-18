@@ -29,13 +29,38 @@ precio.textContent = producto.precio
 let descripcion = document.getElementById("descripcionInfo")
 descripcion.textContent = producto.descripcion
 
+//Mostramos la popularidad real
 let popularidad = document.getElementById("popularidadInfo")
-popularidad.textContent = producto.popularidad
+popularidad.textContent = producto.popularidad;
+popularidad.classList.add("fw-bold")
+
+//Redondeamos la popularidad para mostrar en las estrellas
+let valorProducto = Math.round(producto.popularidad)
+
+//Recorremos el valor de la popularidad y pintamos las estrellas
+for (let index = 1; index <= valorProducto; index++) {
+    if (index == 1) {
+        let estrella1 = document.getElementById('1estrella')
+        estrella1.classList.add("text-warning")
+    }else if(index == 2){
+        let estrella2 = document.getElementById('2estrella')
+        estrella2.classList.add("text-warning")
+    }else if(index == 3){
+        let estrella3 = document.getElementById('3estrella')
+        estrella3.classList.add("text-warning")
+    }else if(index == 4){
+        let estrella4 = document.getElementById('4estrella')
+        estrella4.classList.add("text-warning")
+    }else{
+        let estrella5 = document.getElementById('5estrella')
+        estrella5.classList.add("text-warning")
+    }
+}
 
 let pildora = document.getElementById("pildora")
 console.log(pildora.textContent)
 
-//escucho el click en el boton añadir al carrito
+//Escucho el click en el boton añadir al carrito
 let botonCarrito = document.getElementById("botonAgregarCarrito")
 botonCarrito.addEventListener("click", function(evento) {
     
@@ -56,45 +81,5 @@ botonCarrito.addEventListener("click", function(evento) {
     //Pintando la pildora con la cantidad de productos
     let cantidadCarrito = carrito.length
     pildora.textContent = cantidadCarrito
-
 })
 
-// var item = {input1: 'input1value', input2: 'input2value'};
-// localStorage.setItem(itemIndex, JSON.stringify(item));
-
-// for(var i=0;i<localStorage.length; i++) {
-//     var key = localStorage.key(i);
-//     var item = JSON.parse(localStorage.getItem(key));
-// }
-
-
-// for (let index = 0; index < 5; index++) {
-//     if (i < popularidad) {
-//         document.getElementById(i + 1).style.color="warning"
-//     } else {
-//         document.getElementById(i + 1).style.color="dark"
-//     }    
-// }
-// let contador = 0
-// function calificar(item) {
-//     console.log(item)
-//     contador = item.getElementById(id[0])
-//     let name = item.getElementById(id).substring(1)
-//     for (let index = 0; index < 5; index++) {
-//         if (index < contador) {
-//             document.getElementById((index + 1) + name).style.color="text-warning"
-//         } else {
-//             document.getElementById((index + 1) + name).style.color="text-dark"
-//         }
-        
-//     }
-    // popularidad = item.id[0] //capturar el primer caracter
-    // let name = item.id.substring(1)//captura todo menos el primer caracter ejm: 4-->estrella
-    // for (let index = 0; index < 5; index++) {
-    //     if (i < popularidad) {
-    //         document.getElementById((i + 1) + name).style.color="warning"
-    //     } else {
-    //         document.getElementById((i + 1) + name).style.color="dark"
-    //     }    
-    // }
-// }

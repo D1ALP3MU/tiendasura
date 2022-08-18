@@ -3,7 +3,7 @@ let productos = [
     {
         nombre: "PORTATIL ASUS ROG G513 HF070 RYZEN 7 4800H 16G (2×8) 3200MHz NVMe 512G 4G RTX3050 15,6″ IPS 300Hz TC RGB W10",
         precio: 6455000,
-        popularidad: 5,
+        popularidad: 2.2,
         fotos: ["https://firebasestorage.googleapis.com/v0/b/tiendasuradp.appspot.com/o/producto1.png?alt=media&token=66ee5221-f5f9-45dd-9660-53f948188607", "https://firebasestorage.googleapis.com/v0/b/tiendasuradp.appspot.com/o/producto2.png?alt=media&token=c2241b35-b463-4620-bd7c-42654d7fa734"],
         descripcion: "Eleva tu estilo al siguiente nivel con una estética deportiva disponible en color Original Black jugando en cualquier lugar con un chasis hasta un 7% más pequeño que las generaciones anteriores. Sutiles recortes e íconos adornan el exterior y la parte inferior del portátil y le dan un look inconfundible desde cualquier ángulo. Ilumina tu entorno con acentos Aura Sync que brillan en el logotipo metálico de ROG, el teclado retroiluminado y la barra de luz envolvente. Al disponer de más espacio podrás navegar con mayor precisión y comodidad. El touchpad está recubierto de un cristal mate que ofrece una sensación de calidad y lo hace más resistente. Sistema Operativo: Windows 10 Home – ASUS recomienda Windows 11 Pro para empresas, Actualización gratuita a Windows 11 (si está disponible, consulte el disclaimer).Procesador: AMD Ryzen™ 7 4800H 2.9 GHz (Caché 8M, hasta 4.2 GHz).Grafica: NVIDIA® GeForce RTX™ 3050 Laptop GPU, With ROG Boost up to 1840MHz at 80W (95W with Dynamic Boost), 4GB GDDR6. Pantalla: 6 pulgadas FHD (1920 x 1080) 16:9. Pantalla antireflejo sRGB:100.00%. Adobe:75.35%. Refresh Rate:300Hz. Response Time:3ms IPS-level Adaptive-Sync Optimus. Memoria RAM: 8GB DDR4-3200 SO-DIMM x 2, Max Capacity: 32GB.Almacenamiento: SSD 512GB M.2 NVMe™ PCIe® 3.0. Puertos: 1x 3.5mm Combo Audio Jack. 1x HDMI 2.0b. 1x USB 3.2 Gen 2 Tipo C compatible con pantallas / entrega de alimentación. 3x USB 3.2 Gen 1 Type-A. Teclado y Touchpad: Teclado chiclet retroiluminado 4 zonas RGB Touchpad.Cámara: FHD 1080P@60FPS externa cámara. Audio: Audio por Dolby Atmos. AI noise-canceling technology. Micrófono incorporado. 2x 1.5W speaker. Redes: Wi-Fi 6(802.11ax) (Dual band) 2*2 + Bluetooth 5.1 (*BT version may change with OS upgrades.) -RangeBoost.Batería: 56WHrs, 4S1P, 4-cell Li-ion.Peso: 2.10 Kg (4.63 lbs).Dimensiones (A x P x A): 35.4 x 25.9 x 2.06 ~ 2.59 cm (13.94″ x 10.20″ x 0.81″ ~ 1.02″)."
     },
@@ -18,7 +18,7 @@ let productos = [
         nombre: "PORTATIL ASUS VIVOBOOK K513EA-BQ1796 i5 1135G7 8G NVMe 512G INTL IRIS 15,6″IPS FHD HUELLA ENDL PLATA",
         fotos: ["https://firebasestorage.googleapis.com/v0/b/tiendasuradp.appspot.com/o/producto5.png?alt=media&token=78e96bed-42ff-44f4-94fa-6ee03aba068a", "https://firebasestorage.googleapis.com/v0/b/tiendasuradp.appspot.com/o/producto6.png?alt=media&token=0ee38cf1-73bf-45cf-a4d8-0db87b5b5d9a"],
         precio: 2971000,
-        popularidad: 3,
+        popularidad: 1,
         descripcion: "Usa tu nueva VivoBook, en color negro Indie Black o Transparent Silver para trabajar, estudiar o entretenerte y disfruta de la gran fluidez que te brinda hasta su Procesador Intel® Core™ i7 de 11ª generación, de 4 núcleos, y la gran capacidad de su almacenamiento híbrido que combina las altas velocidades de datos de un SSD con las grandes capacidades de un HDD, brindándole lo mejor de ambos mundos para aumentar la productividad. Además, con la nueva tecnología ASUS Intelligent Performance Technology tendrás un incremento de hasta un 40% más en performance, batería de larga duración durante todo el día y un diseño exclusivo que mantendrá su temperatura adecuada para un mayor rendimiento. VivoBook tiene que ver con la autoexpresión y su aspecto atrevido hace una declaración. De peso liviano, chasis de metal y pantalla NanoEdge de bordes ultradelgados para una mayor inmersión visual, ASUS VivoBook te mantiene productivo y entretenido, sin importar dónde te encuentres. Sistema operativo: Windows 10 Home – ASUS recomienda Windows 10 Pro para empresas. Procesador: Procesador Intel® Core™ i5-1135G7; 0,9-2,4 GHz (caché de 8M; hasta 4,2 GHz). Gráficos: Intel Iris Xᵉ Graphics (available for Intel® Core™ i5/i7/i9 with dual channel memory). Pantalla: 15,6 pulgadas, HD (1366 × 768) 16:9, Panel de nivel IPS, Retroiluminación LED, 250 nits, NTSC: 45 %, Anti-glare display, Pantalla táctil, Screen-to-body ratio: 85% Memoria: Memoria DDR3 de 8 GB en panel. Almacenamiento: SSD de 512 GB M.2 NVMe™ PCIe® 3.0 Ranuras de expansión (incluye las utilizadas): 1x ranura DDR4 SO-DIMM. 1x M.2 2280 PCIe 3.0×2. HDD SATA 1x STD 2,5 in. Puertos de E/S: 1x USB 3.2 Gen 1 Tipo A. 1x USB 3.2 Gen 1 Tipo C. 2x USB 2.0 Tipo A. 1x HDMI 1.4. 1x salida auricular. Lector de tarjeta micro SD. Lector de tarjeta micro SD 4.0. Teclado y Touchpad:  Teclado tipo chiclet con teclado numérico, Recorrido de tecla de 1,4 mm. Cámara: HD 720. Audio: Audio de ICEpower®. Altavoz incorporado. Micrófono incorporado. Harman/Kardon (normal). Redes y comunicaciones: WiFi 5(802.11ac)+Bluetooth 4.1 (banda dual) 1 x 1. Batería: 42 Wh, 3S1P, 3 celdas Li-ion. Fuente de alimentación: ø 4.0; adaptador 65 W CA; Salida: 19 V CC, 3,42 A, 65 W; Entrada: 100~240 V CA 50/60 Hz universal. Peso: 1.80 kg (3.97 lbs). Dimensiones: 35.90 x 23.50 x 1.79 ~ 1.79 cm (14.13″ x 9.25″ x 0.70″ ~ 0.70″)"
     },
     {
@@ -111,7 +111,7 @@ productos.forEach(function(producto){
     //Crear popularidad
     let popularidad = document.createElement("h4")
     popularidad.classList.add("fw-bold")
-    popularidad.textContent = (producto.popularidad)
+    popularidad.textContent = producto.popularidad;
     
     //Creando la descripción
     let descripcion = document.createElement("p")
@@ -127,4 +127,4 @@ productos.forEach(function(producto){
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 
-})
+})                                                                                 
