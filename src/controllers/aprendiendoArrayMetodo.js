@@ -110,7 +110,7 @@ productos.forEach(function(producto){
 
     //Crear popularidad
     let popularidad = document.createElement("h4")
-    popularidad.classList.add("fw-bold")
+    popularidad.classList.add("fw-bold", "text-white")
     popularidad.textContent = producto.popularidad;
     
     //Creando la descripción
