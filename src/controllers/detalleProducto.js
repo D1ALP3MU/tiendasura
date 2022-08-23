@@ -22,9 +22,11 @@ foto.src = producto.foto
 
 let nombre = document.getElementById("nombreInfo")
 nombre.textContent = producto.nombre
+nombre.classList.add("fw-bold")
 
 let precio = document.getElementById("precioInfo")
 precio.textContent = producto.precio
+precio.classList.add("fw-bold")
 
 let descripcion = document.getElementById("descripcionInfo")
 descripcion.textContent = producto.descripcion
