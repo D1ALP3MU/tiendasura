@@ -59,8 +59,8 @@ if (carrito == null) {
         cantidad.classList.add("text-center")
         cantidad.textContent = "Cantidad: " + producto.cantidad
 
-        let subtotal = document.createElement("h2")
-        subtotal.classList.add("fw-bold")
+        let subtotal = document.createElement("h3")
+        subtotal.classList.add("fw-bold", "text-center")
 
         console.log(producto.precio)
         console.log(producto.cantidad)
@@ -68,9 +68,8 @@ if (carrito == null) {
         let banana = producto.precio.split("$")[1]
         console.log(banana)
 
-        subtotal.textContent = banana * producto.cantidad
+        subtotal.textContent = "Subtotal: $" + banana * producto.cantidad
         console.log(subtotal)
-
 
 
         columna1.appendChild(foto)
