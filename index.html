@@ -26,7 +26,7 @@
         <a class="navbar-brand" href="#">
           <img class="logo rounded-circle" src="./assets/img/logogamer.jpg" alt="" width="70">
         </a>
-        <a class="navbar-brand" href="#">Computer Store</a>
+        <a class="navbar-brand" href="#">Tienda Gamer</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -51,19 +51,23 @@
     </nav>
   </header>
   <main>
-    <section class="banner text-white">
-      <h1>TIENDA DE COMPUTADORES</h1>
+    <section class="banner text-white mt-2">
+      <h1 class="fw-bold">TIENDA GAMER</h1>
     </section>
+
     <section>
-      <div class="container mt-5">
+      <div class="container-fluid mt-5 bg-dark rounded-5">
         <div class="row">
-          <div class="col-12 col-md-8">
-            <img class="img-fluid w-100" src="./assets/img/Portatiles-Gamer.png" alt="">
+          <div class="col-2 col-md-6">
+            <h1 class="text-light mt-2 fw-bold">PORTÁTILES GAMER</h1>
+            <p class="text-light">Todo lo que necesitas, más rápido, más potente...</p>
+            <p class="text-light">Diseña, crea y juega desde donde quieras con los mejores portátiles gamer.</p>
+            <img class="img-fluid w-100 mt-2" src="./assets/img/Portatiles-Gamer.png" alt="">
           </div>
           <div class="col-12 col-md-4 align-self-center">
-            <h3>BIENVENIDO</h3>
-            <P>Somos una empresa colombiana, constituida en el año 2020 en la ciudad de Medellín, dedicada a la distribución de hardware y sistemas informáticos de última tecnología y de calidad reconocida. Brindando a nuestros clientes soluciones, asesoría, soporte y mantenimiento de sus equipos de cómputo. Ofreciendo una gran variedad de productos y unos precios altamente competitivos a nivel nacional.</P>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-box-arrow-in-right me-2"></i>Regístrate</button>
+            <h3 class="text-light fw-bold">BIENVENIDO!</h3>
+            <P class="text-light">Somos una empresa colombiana, constituida en el año 2020 en la ciudad de Medellín, dedicada a la distribución de hardware y sistemas informáticos de última tecnología y de calidad reconocida. Brindando a nuestros clientes soluciones, asesoría, soporte y mantenimiento de sus equipos de cómputo. Ofreciendo una gran variedad de productos y unos precios altamente competitivos a nivel nacional.</P>
+            <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-box-arrow-in-right me-2"></i>Regístrate</button>
           </div>
         </div>
       </div>
@@ -71,121 +75,215 @@
     <section>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Regístrate</h5>
+          <h5 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Regístrate</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nombre completo</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres y apellidos">
+              <label for="Inputname1" class="form-label">Nombre completo</label>
+              <input type="email" class="form-control rounded-pill" id="Inputname1" aria-describedby="nameHelp" placeholder="Nombres y apellidos">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+              <label for="InputEmail1" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control rounded-pill" id="InputEmail1" aria-describedby="emailHelp" placeholder="e-mail">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Teléfono</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="opcional">
+              <label for="InputpPhone1" class="form-label">Teléfono</label>
+              <input type="Phone" class="form-control rounded-pill" id="InputpPhone1" placeholder="opcional">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="mínimo 6 caracteres">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control rounded-pill" id="password" placeholder="mínimo 6 caracteres">
             </div>
             <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Mostrar</label>
+              <input type="checkbox" class="form-check-input rounded-circle" id="CheckPassword">
+              <label class="form-check-label" for="exampleCheck1">Mostrar contraseña</label>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Déjanos tu opinión"></textarea>
+              <textarea class="form-control rounded-4" id="exampleFormControlTextarea1" rows="3" placeholder="Déjanos tu opinión"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-success">Enviar</button>
           </form>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="container container-fluid w-100 mt-5">
+      <section class="row mt-3 w-100">
+        <div class="col-12 col-12 col-md-6">
+          <h4 class="text-dark text-center fw-bold">PARLANTES LOGITECH G560 RGB 120W BLUETOOTH RGB GAMING</h4>
+          <img class="d-block w-100 rounded-5 bg-warning" src="./assets/img/parlantes.png" alt="" height="500px">
+          <p class="text-dark text-right">Siente la acción explosiva de 240 vatios de pico (120 vatios reales) del subwoofer con salida inferior y dos altavoces satélite con ligeros pero robustos transductores metálicos. Oye todos los detalles tal y como los imaginaron los diseñadores de juegos y sonido de este sistema de altavoces 2.1. Desde diversos ángulos, gracias al exclusivo diseño de transductor con un enorme espacio sonoro.</p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-dark text-center fw-bold">COMBO 4 EN 1 REDRAGON S101-BA-2 RGB TECL+MOU+DIADE+PAD MOU</h2>
+          <img class="d-block w-100 rounded-5 bg-success" src="./assets/img/comboPeriferico.png" alt="" height="500px">
+          <p class="text-dark text-right">El kit S101-BA realmente posee todo lo necesario para jugar contenido en una sola caja. Compuesto por auriculares, teclado rgb, mouse y su correspondiente mousepad. Todo lo necesario para lanzarnos directo al ataque.</p>
+        </div>
+      </section>
+    </section>
     <section class="container container-fluid w-100 mt-2">
-      <h1 class="text-dark text-center">Nuevos Productos</h1>
-      <div class="row mt-3 w-100">
+      <section class="row mt-2 w-100">
+        <div class="col-12 col-12 col-md-6">
+          <h4 class="text-dark text-center fw-bold">MONITOR LED AOC 24,5″ GAMING FHD-DP-1m-144h G2590FX</h4>
+          <img class="d-block w-100 rounded-5 bg-dark" src="./assets/img/monitorGamer1.png" alt="" height="500px">
+          <p class="text-dark text-right">Equípate con una frecuencia de fotogramas dos veces superior a la de otros monitores y despídete de los seccionamientos de imagen y los movimientos borrosos. Con una frecuencia de actualización de 144 Hz cada fotograma se procesa con gran precisión y en suave sucesión, por lo que puedes alinear tus disparos con precisión y apreciar las carreras de alta velocidad en todo su esplendor.</p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-dark text-center fw-bold">SILLA GAMER CORSAIR T2 ROAD WARRIOR, NEGRA/ROJO COJÍN DE CUERO PU</h2>
+          <img class="d-block w-100 rounded-5 bg-primary" src="./assets/img/sillaGamer.png" alt="" height="500px">
+          <p class="text-dark text-rigth">El CORSAIR T2 ROAD WARRIOR cuenta con un asiento ancho, respaldo alto y acentos de color personalizados de dos capas, que le brindan el estilo, la comodidad y la resistencia que necesita para sesiones de juego de larga duración. 
+          Con almohadas ajustables para el cuello y la zona lumbar, envueltas en una suave tela de microfibra, encontrará el máximo apoyo diseñado para las áreas importantes de su cuerpo.
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
+  <section class="container container-fluid w-100 mt-4">
+    <h1 class="text-dark text-center fw-bold">Nuevos Productos</h1>
+    <p class="text-secondary text-center">Conoce los nuevos productos que tenemos para ti.</p>
+    <div class="container mt-4">
+      <div id="fila" class="row row-cols-1 row-cols-md-3 g-3">
         <div class="col-12 col-md-4">
-          <div class="card" style="width: 22rem;">
+          <div class="card h-100">
             <img src="./assets/img/tecladoNuevo.png" class="card-img-top" alt="" height="300px">
             <div class="card-body">
-              <h5 class="card-title">COMBO 4 EN 1 TRUST ZIVA TEC-MOU-PAD-DIA GAMING BUNDLE</h5>
+              <h5 class="card-title fw-bold">COMBO 4 EN 1 TRUST ZIVA TEC-MOU-PAD-DIA GAMING BUNDLE</h5>
               <p class="card-text">Paquete para juegos 4 en 1, con cómodos auriculares, teclado de tamaño normal, ratón óptico y alfombrilla no deslizante para ratón. Tipos de dispositivos compatibles: PC, computadora portátil, consola de juegos.</p>
-              <a href="#" class="btn btn-primary">Más información</a>
+              <a href="./src/views/tienda.html" class="btn btn-danger">Ir a la tienda</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="card" style="width: 22rem;">
-            <img src="./assets/img/nuevoProducto.png" class="card-img-top" alt="" height="300px">
-            <div class="card-body">
-              <h5 class="card-title">PORTATIL MSI GF63 THIN-11SC CORE i7 11800H 8G 3200 M2 NVMe 512G 4G GTX 1650 15,6″FHD FREE</h5>
-              <p class="card-text">Equipado con el último procesador Intel® Core ™  i7 de 11.ª generación, es hasta un 40 % más de rendimiento que la generación anterior.</p>
-              <a href="#" class="btn btn-primary">Más información</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="card" style="width: 22rem;">
+          <div class="card h-100">
             <img src="./assets/img/nuevoProducto2.png" class="card-img-top" alt="" height="300px">
             <div class="card-body">
-              <h5 class="card-title">PORTATIL ASUS TUF FX517ZE-HN045 CORE i5 12450H 8G DDR5 M2 NVMe 512G 4G RTX 3050Ti 15,6″IPS FHD 144Hz FREE</h5>
+              <h5 class="card-title fw-bold">PORTATIL ASUS TUF FX517ZE-HN045 CORE i5 12450H 8G</h5>
               <p class="card-text">Las líneas limpias definen la apariencia del nuevo TUF Dash F15 2022. Una cubierta superior de aluminio inspirada en un mecanismo está disponible en Off Black o Moonlight White.</p>
-              <a href="#" class="btn btn-primary">Más información</a>
+              <a href="./src/views/tienda.html" class="btn btn-danger">Ir a la tienda</a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row mt-4">
         <div class="col-12 col-md-4">
-          <div class="card" style="width: 22rem;">
+          <div class="card h-100">
+            <img src="./assets/img/nuevoProducto.png" class="card-img-top" alt="" height="300px">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">PORTATIL MSI GF63 THIN-11SC CORE i7 11800H 8G 3200 M2 NVMe 512G 4G GTX 1650 15,6″FHD FREE</h5>
+              <p class="card-text">Equipado con el último procesador Intel® Core ™  i7 de 11.ª generación, es hasta un 40 % más de rendimiento que la generación anterior.</p>
+              <a href="./src/views/tienda.html" class="btn btn-danger">Ir a la tienda</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
             <img src="./assets/img/nuevo3.png" class="card-img-top" alt="" height="300px">
             <div class="card-body">
-              <h5 class="card-title">KIT VENTILADOR X5 TORRE ARCTIC P12 PWM PST VALUE</h5>
+              <h5 class="card-title fw-bold">KIT VENTILADOR X5 TORRE ARCTIC P12 PWM PST VALUE</h5>
               <p class="card-text">Durante el desarrollo del nuevo P12 PWM PST, se puso especial énfasis en una corriente de aire enfocada y, por lo tanto, en una alta presión estática. El ventilador garantiza una refrigeración extremadamente eficiente, incluso con una mayor resistencia del aire</p>
-              <a href="#" class="btn btn-primary">Más información</a>
+              <a href="./src/views/tienda.html" class="btn btn-danger">Ir a la tienda</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="card" style="width: 22rem;">
+          <div class="card h-100">
             <img src="./assets/img/mouse.png" class="card-img-top" alt="" height="300px">
             <div class="card-body">
-              <h5 class="card-title">MOUSE LOGITECH G305 MENTA LIGHTSPEED INALÁMBRICO</h5>
+              <h5 class="card-title fw-bold">MOUSE LOGITECH G305 MENTA LIGHTSPEED INALÁMBRICO</h5>
               <p class="card-text">Mouse inalámbrico para juegos LIGHTSPEED diseñado para un desempeño excelente con las innovaciones tecnológicas más recientes. Impresionante duración de baterías de 250 horas. Ahora en una variedad de vibrantes colores.</p>
-              <a href="#" class="btn btn-primary">Más información</a>
+              <a href="./src/views/tienda.html" class="btn btn-danger">Ir a la tienda</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="card" style="width: 22rem;">
+          <div class="card h-100">
             <img src="./assets/img/teclado2.png" class="card-img-top" alt="" height="300px">
             <div class="card-body">
-              <h5 class="card-title">TECLADO LOGITECH G413 SE MECANICO</h5>
+              <h5 class="card-title fw-bold">TECLADO LOGITECH G413 SE MECANICO</h5>
               <p class="card-text">El teclado G413 SE ofrece el desempeño y la resistencia que requiere el entorno de competición, desde interruptores mecánicos táctiles a seguidilla de 6 teclas con prevención de efecto fantasma y teclas de PBT.</p>
-              <a href="#" class="btn btn-primary">Más información</a>
+              <a href="./src/views/tienda.html" class="btn btn-danger">Ir a la tienda</a>
             </div>
           </div> 
         </div>
       </div>
-    </section> 
-    
-  </main>
-  <footer>
+  </div>
+  </section> 
 
+  <footer>
+    <div class="container-fluid mt-5">
+      <div class="row p-3 pb-2 bg-dark text-light">
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <a class="navbar-brand" href="#">
+            <img class="logo rounded-circle" src="./assets/img/logogamer.jpg" alt="" width="70">
+            <p class="h3 text-light">Tienda Gamer</p>
+          </a>
+          <p class="text-secondary">La Mejor Tienda de PC Gamers en Colombia.</p>
+          <p class="text-secondary">Medellín, Antioquia</p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-house-fill"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"><i class="bi bi-handbag-fill"></i> Marcas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="./src/views/tienda.html"><i class="bi bi-shop"></i> Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"><i class="bi bi-headset"></i> Contáctanos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <h4>Síguenos en:</h4>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-facebook"></i> Facebook</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"><i class="bi bi-instagram"></i> Instagram</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"><i class="bi bi-youtube"></i> Youtube</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"><i class="bi bi-twitter"></i> Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <h4>Suscríbete a nuestro boletín</h4>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <h5 class="text-secondary">Para recibir ofertas y las últimas noticias.</h5>
+            </li>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="Check1">
+              <label class="form-check-label text-primary" for="exampleCheck1">He leído y acepto los términos y condiciones.
+              </label>
+            </div>
+            <li class="nav-item">
+              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Escriba su email para suscribirse a nuestra lista">
+            </li>
+            <li class="nav-item mt-2">
+              <button type="submit" class="btn btn-secondary">Suscribir</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12">
+          <p class="text-white text-center pt-4">Copyright - Tienda Gamer - Todos los derechos reservados © 2022.</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
 
-  
+  <script src="./src/controllers/prueba.js"></script>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
