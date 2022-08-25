@@ -29,3 +29,9 @@
     background: rgb(70,71,97);
     background: linear-gradient(90deg, rgba(70,71,97,1) 0%, rgba(174,96,120,1) 0%, rgba(246,246,251,1) 0%, rgba(245,246,249,1) 100%, rgba(33,196,38,1) 100%);
 }
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}

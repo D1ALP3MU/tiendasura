@@ -32,16 +32,17 @@ if (carrito == null) {
     carrito.forEach(function (producto) {
 
         let fila = document.createElement("div")
-        fila.classList.add("row", "my-5", "justify-content-center")
+        fila.classList.add("row", "my-5", "justify-content-center", "shadow", "p-3")
         
         let columna1 = document.createElement("div")
         columna1.classList.add("col-12", "col-md-5")
 
         let columna2 = document.createElement("div")
-        columna2.classList.add("col-12", "col-md-3")
+        columna2.classList.add("col-12", "col-md-3", "border-end", "align-self-center")
 
         let columna3 = document.createElement("div")
-        columna3.classList.add("col-12", "col-md-3")
+        columna3.textContent = "Subtotal"
+        columna3.classList.add("col-12", "col-md-3", "align-self-center", "fw-bold", "text-center", "fs-2")
 
         let foto = document.createElement("img")
         foto.classList.add("img-fluid", "w-100")
@@ -60,17 +61,12 @@ if (carrito == null) {
         cantidad.textContent = "Cantidad: " + producto.cantidad
 
         let subtotal = document.createElement("h3")
-        subtotal.classList.add("fw-bold", "text-center")
+        subtotal.classList.add("fw-bold", "text-center", "bg-dark", "text-light")
 
-        console.log(producto.precio)
-        console.log(producto.cantidad)
-        console.log(producto.cantidad * producto.cantidad)
-        let banana = producto.precio.split("$")[1]
-        console.log(banana)
+        let subtotalCalculado = producto.precio.split("$")[1]
+        console.log(subtotalCalculado)
 
-        subtotal.textContent = "Subtotal: $" + banana * producto.cantidad
-        console.log(subtotal)
-
+        subtotal.textContent = "$" + subtotalCalculado * producto.cantidad
 
         columna1.appendChild(foto)
         columna2.appendChild(nombre)
