@@ -3,6 +3,7 @@ console.log("Hola estoy detallando la compra")
 //Llamar a la memoria
 let producto = JSON.parse(localStorage.getItem("producto"))
 console.log(producto)
+console.log(producto.foto)
 
 let carrito
 if (JSON.parse(localStorage.getItem("carrito")) != null) {
@@ -84,4 +85,6 @@ botonCarrito.addEventListener("click", function(evento) {
     let cantidadCarrito = carrito.length
     pildora.textContent = cantidadCarrito
 })
+
+
 

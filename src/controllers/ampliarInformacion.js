@@ -9,7 +9,7 @@ contenedorProductos.addEventListener("click", function(evento){
         informacionProducto.popularidad = (evento.target.parentElement.querySelector("h4").textContent)
         informacionProducto.descripcion = (evento.target.parentElement.querySelector("p").textContent)
         informacionProducto.foto = (evento.target.parentElement.querySelector("img").src)
-
+        
         //Guardando un archivo en memoria
         //siempre que vaya a guardar en la memoria un objeto o un arreglo debo poner la siguiente instrucción
         localStorage.setItem("producto", JSON.stringify(informacionProducto))
@@ -21,4 +21,16 @@ contenedorProductos.addEventListener("click", function(evento){
         window.location.href = "./ampliarInfo.html"
         
     }
+})
+
+
+let botonSuscribir = document.getElementById("botonSuscribir")
+botonSuscribir.addEventListener("click", function(evento){
+    Swal.fire({
+        title: "Gracias por suscribirte a nuestro boletín.",
+        icon: "success",
+        timer: "5000",
+        toast: true,
+        position: "bottom-end" 
+    })
 })
