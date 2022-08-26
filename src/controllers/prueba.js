@@ -33,9 +33,6 @@ botonSuscribir.addEventListener("click", function(evento){
 
 
 
-
-
-
 // function mostrarContrasenia() {
 //     let password = document.getElementById("password")
 //     if(password.type == "password"){
