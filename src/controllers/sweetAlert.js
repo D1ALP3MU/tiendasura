@@ -2,7 +2,7 @@ let agregarCarrito = document.getElementById("botonAgregarCarrito")
 agregarCarrito.addEventListener("click", function(){
     const Toast = Swal.mixin({
         toast: true,
-        position: 'bottom-start',
+        position: 'bottom-end',
         showConfirmButton: false,
         timer: 5000,
         timerProgressBar: true,

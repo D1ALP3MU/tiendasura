@@ -111,6 +111,9 @@ productos.forEach(function(producto){
     imagen.addEventListener("mouseleave", function(){
         imagen.src = producto.fotos[0]
     })
+    imagen.addEventListener("mouseup", function(){
+        imagen.src = producto.fotos[0]
+    })
 
     //Crear nombre
     let nombre = document.createElement("h3")
@@ -126,6 +129,10 @@ productos.forEach(function(producto){
     let popularidad = document.createElement("h4")
     popularidad.classList.add("fw-bold", "d-none")
     popularidad.textContent = producto.popularidad;
+
+    //Creando estrellas
+    let estrella = document.createElement("i")
+    estrella.classList.add("bi", "bi-star-fill", "text-warning")
     
     //Creando la descripción
     let descripcion = document.createElement("p")
@@ -135,6 +142,7 @@ productos.forEach(function(producto){
     //Definiendo padres e hijos
     tarjeta.appendChild(imagen)
     tarjeta.appendChild(nombre)
+    tarjeta.appendChild(estrella)
     tarjeta.appendChild(precio)
     tarjeta.appendChild(popularidad)
     tarjeta.appendChild(descripcion)

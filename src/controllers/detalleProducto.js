@@ -1,20 +1,20 @@
 console.log("Hola estoy detallando la compra")
 
 //Llamar a la memoria
-let producto = JSON.parse(localStorage.getItem("producto"))
+let producto = JSON.parse(sessionStorage.getItem("producto"))
 console.log(producto)
 console.log(producto.foto)
 
 let carrito
-if (JSON.parse(localStorage.getItem("carrito")) != null) {
-    carrito = JSON.parse(localStorage.getItem("carrito"))
+if (JSON.parse(sessionStorage.getItem("carrito")) != null) {
+    carrito = JSON.parse(sessionStorage.getItem("carrito"))
     let pildora = document.getElementById("pildora")
     pildora.textContent = carrito.length
 } else {
     carrito = []
 }
 
-let carritoMemoria = JSON.parse(localStorage.getItem("carrito"))
+let carritoMemoria = JSON.parse(sessionStorage.getItem("carrito"))
 console.log(carritoMemoria)
 
 //Referenciar la imagen del producto
@@ -79,7 +79,7 @@ botonCarrito.addEventListener("click", function(evento) {
     console.log(carrito)
 
     //Agregando el carrito a la memoria
-    localStorage.setItem("carrito", JSON.stringify(carrito))
+    sessionStorage.setItem("carrito", JSON.stringify(carrito))
 
     //Pintando la pildora con la cantidad de productos
     let cantidadCarrito = carrito.length

@@ -12,7 +12,7 @@ contenedorProductos.addEventListener("click", function(evento){
         
         //Guardando un archivo en memoria
         //siempre que vaya a guardar en la memoria un objeto o un arreglo debo poner la siguiente instrucción
-        localStorage.setItem("producto", JSON.stringify(informacionProducto))
+        sessionStorage.setItem("producto", JSON.stringify(informacionProducto))
 
         //Error que se puede cometer
         //localStorage.setItem(JSON.stringify("producto", informacionProducto))
