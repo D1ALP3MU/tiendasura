@@ -18,16 +18,17 @@ if (carrito == null) {
     imagen.src = "../../assets/img/carritoVacio.png"
 
     let mensaje = document.createElement("h3")
-    mensaje.classList.add("text-danger", "text-center")
-    mensaje.textContent = "Tu carrito está vacío"
+    mensaje.classList.add("text-secondary", "text-center", "fw-bold")
+    mensaje.textContent = "Tu carrito está vacío..."
 
     let botonTienda = document.createElement("a")
-    botonTienda.classList.add("btn", "btn-success", "fw-bold", "mt-4")
+    botonTienda.classList.add("nav", "nav-pointer", "fw-bold", "mt-4", "justify-content-center", "my-5")
+    botonTienda.style.cursor = "pointer"
+    botonTienda.style.textDecoration = "none"
     botonTienda.textContent = "Regresar a la tienda"
 
     botonTienda.addEventListener("click", function(){
-        console.log("Estoy regresando a la tienda")
-        botonTienda.href = "http://127.0.0.1:5500/src/views/tienda.html"
+        window.location.href = "./tienda.html"
     })
 
     columna.appendChild(imagen)

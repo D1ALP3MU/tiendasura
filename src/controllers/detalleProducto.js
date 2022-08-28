@@ -30,6 +30,7 @@ precio.textContent = producto.precio
 precio.classList.add("fw-bold")
 
 let descripcion = document.getElementById("descripcionInfo")
+descripcion.classList.add("mt-3")
 descripcion.textContent = producto.descripcion
 
 //Mostramos la popularidad real

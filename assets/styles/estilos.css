@@ -29,3 +29,11 @@
 }
 
 
+.fuente::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+.fuente::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 10px;
+}
