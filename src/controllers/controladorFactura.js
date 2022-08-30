@@ -1,12 +1,15 @@
 //llamando al carrito de la memoria localStorage
 let carrito = JSON.parse(sessionStorage.getItem("carrito"))
-console.log(carrito)
-
+let totalCompra = document.getElementById("totalCompra")
 
 let factura = document.getElementById("factura")
 
 //COMPRUEBO EL ESTADO DEL CARRITO DE COMPRAS
 if (carrito == null) {
+
+    //Poner el total en 0
+    totalCompra.textContent = "Total: $0" 
+    
     let fila = document.createElement("div")
     fila.classList.add("row", "my-5", "justify-content-center")
 
@@ -79,6 +82,21 @@ if (carrito == null) {
 
         subtotal.textContent = "$" + subtotalCalculado * producto.cantidad
 
+
+        let botonLimpiarCarrito = document.getElementById("botonLimpiar")
+        botonLimpiarCarrito.addEventListener("click", function(evento){
+            
+            //Limpio el carrito de la memoria
+            sessionStorage.removeItem("carrito")
+
+            //Recargar la pagina
+            window.location.href = "./resumenCompra.html"
+
+            //Poner el total en 0
+            totalCompra.textContent = "Total: $0" 
+
+        })
+
         columna1.appendChild(foto)
         columna2.appendChild(nombre)
         columna2.appendChild(precio)
@@ -92,3 +110,4 @@ if (carrito == null) {
 
     })
 }
+
