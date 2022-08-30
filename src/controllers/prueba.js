@@ -32,7 +32,7 @@ botonSuscribir.addEventListener("click", function(evento){
 })
 
 
-
+//OTRA FORMA PARA MOSTRAR CONTRASEÑA
 // function mostrarContrasenia() {
 //     let password = document.getElementById("password")
 //     if(password.type == "password"){

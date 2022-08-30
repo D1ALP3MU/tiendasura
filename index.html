@@ -105,27 +105,27 @@
         <div class="offcanvas-body">
           <form>
             <div class="mb-3">
-              <label for="Inputname1" class="form-label">Nombre completo</label>
-              <input type="name" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25" id="Inputname1" aria-describedby="nameHelp" placeholder="Nombres y apellidos">
+              <label for="Inputname1" class="form-label fw-bold">Nombre completo</label><span class="text-danger fw-bold"> *</span>
+              <input type="name" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25" id="Inputname1" aria-describedby="nameHelp" placeholder="Nombres y apellidos" required>
             </div>
             <div class="mb-3">
-              <label for="InputEmail1" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25" id="InputEmail1" aria-describedby="emailHelp" placeholder="e-mail">
+              <label for="InputEmail1" class="form-label fw-bold">Correo electrónico</label><span class="text-danger fw-bold"> *</span>
+              <input type="email" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25" id="InputEmail1" aria-describedby="emailHelp" placeholder="e-mail" required>
             </div>
             <div class="mb-3">
-              <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25" id="password" placeholder="mínimo 6 caracteres">
+              <label for="password" class="form-label fw-bold">Contraseña</label><span class="text-danger fw-bold"> *</span>
+              <input type="password" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25"  name="txt_password" id="password" placeholder="mínimo 6 caracteres" required>
             </div>
             <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input rounded-circle" id="CheckPassword">
+              <input type="checkbox" class="form-check-input rounded-circle bg-success p-2 text-dark bg-opacity-25" id="CheckPassword">
               <label class="form-check-label" for="exampleCheck1">Mostrar contraseña</label>
             </div>
             <div class="mb-3">
-              <label for="InputpPhone1" class="form-label">Teléfono</label>
-              <input type="Phone" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25" id="InputpPhone1" placeholder="opcional">
+              <label for="InputpPhone1" class="form-label fw-bold">Teléfono</label>
+              <input type="Phone" class="form-control rounded-pill bg-success p-2 text-dark bg-opacity-25"  name="txt_telefono" id="InputpPhone1" placeholder="opcional">
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+              <label for="exampleFormControlTextarea1" class="form-label fw-bold">Mensaje</label>
               <textarea class="form-control rounded-4 bg-success p-2 text-dark bg-opacity-25" id="FormControlTextarea1" rows="3" placeholder="Déjanos tu opinión"></textarea>
             </div>
             <button type="submit" class="btn btn-success rounded-5 w-25 fw-bold text">Enviar</button>
