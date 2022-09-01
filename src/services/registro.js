@@ -8,7 +8,8 @@ botonRegistro.addEventListener("click", function(evento){
 
     let email = document.getElementById("InputEmail1").value
     let password = document.getElementById("password").value
-    console.log(email, password)
+
+    let formulario = document.getElementById("formulario")
 
     const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
@@ -16,13 +17,26 @@ botonRegistro.addEventListener("click", function(evento){
         // Signed in
         const user = userCredential.user;
         // ...
-        alert("Registro exitoso")
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Registro exitoso!',
+          showConfirmButton: false,
+          timer: 2000
+        })
+        formulario.reset()
+        const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasExample')
+        bsOffcanvas.hide()
     })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
-    alert("Upss fallamos" + errorMessage)
+    Swal.fire({
+      icon: 'error',
+      title: 'Uupps...',
+      text: errorCode + errorMessage,
+    })
   });
 
 })
