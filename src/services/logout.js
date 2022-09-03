@@ -16,7 +16,8 @@ botonSalir.addEventListener("click", function(evento){
         timer: 2000
     })
     window.location.href = "./index.html"
-    }).catch((error) => {
+    })
+    .catch((error) => {
     // An error happened.
     });
 

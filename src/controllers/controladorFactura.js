@@ -34,6 +34,9 @@ if (carrito == null) {
         window.location.href = "./tienda.html"
     })
 
+    let botonFinalizarCompra = document.getElementById("btnFinalizarCompra")
+    botonFinalizarCompra.classList.add("d-none")
+
     columna.appendChild(imagen)
     columna.appendChild(mensaje)
     columna.appendChild(botonTienda)
@@ -41,7 +44,9 @@ if (carrito == null) {
     factura.appendChild(fila)
     
 } else {
-    
+    //Se crea un arreglo para almacenar los subtotales
+    let subTotales = []
+
     //Recorro el carrito
     carrito.forEach(function (producto) {
 
@@ -78,12 +83,25 @@ if (carrito == null) {
         subtotal.classList.add("fw-bold", "text-center", "bg-dark", "text-light")
 
         let subtotalCalculado = producto.precio.split("$")[1]
-        console.log(subtotalCalculado)
 
         subtotal.textContent = "$" + subtotalCalculado * producto.cantidad
 
+        //Se utiliza el método push() para agragar valores al array subtotales
+        let acumuladorSubtotal
+        acumuladorSubtotal = subtotalCalculado * producto.cantidad
+        subTotales.push(parseInt(acumuladorSubtotal))
+
+        console.log(subTotales)
+
+        //Se crea un ciclo (for of) para sumar los valores del array subtotales
+        let sumaSubtotales = 0
+        for (let i of subTotales) sumaSubtotales += i
+        console.log(sumaSubtotales)
+        
+        totalCompra.textContent =  "$" + sumaSubtotales
 
         let botonLimpiarCarrito = document.getElementById("botonLimpiar")
+        botonLimpiarCarrito.style.cursor = "pointer"
         botonLimpiarCarrito.addEventListener("click", function(evento){
             
             //Limpio el carrito de la memoria
@@ -94,9 +112,7 @@ if (carrito == null) {
 
             //Poner el total en 0
             totalCompra.textContent = "Total: $0" 
-
         })
-
         columna1.appendChild(foto)
         columna2.appendChild(nombre)
         columna2.appendChild(precio)
@@ -106,8 +122,6 @@ if (carrito == null) {
         fila.appendChild(columna2)
         fila.appendChild(columna3)
         factura.appendChild(fila)
-
-
     })
 }
 

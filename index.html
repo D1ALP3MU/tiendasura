@@ -19,13 +19,13 @@
   <link rel="shortcut icon" class="rounded-circle" href="./assets/img/LogoTiendaGamer.png">
 </head>
 
-<body class="fuente">
+<body class="fuente"> 
 
   <header class="fixed-top">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark animate__animated animate__rubberBand fixe">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img class="logo rounded-circle" src="./assets/img/LogoTiendaGamer.png" alt="" width="70">
+          <img class="logo rounded-circle" src="./assets/img/LogoTiendaGamer.png" alt="" width="80">
         </a>
         <a class="navbar-brand" href="#">Tienda Gamer</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -70,10 +70,14 @@
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Carrito</a>
+              <a class="nav-link" href="./src/views/resumenCompra.html"><i class="bi bi-cart-plus-fill fs-2 text-light"></i>
+                  <span id="pildora" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger">
+                      0
+                  </span>
+              </a>
             </li>
             <li class="nav-item">
-              <a id="usuario" class="nav-link active" aria-current="page" href="./src/views/login.html">USUARIO</a>
+              <a id="usuario" class="nav-link active" aria-current="page" href="./src/views/login.html">Iniciar Sesión</a>
             </li>
             <li class="nav-item">
               <a id="botonSalir" class="nav-link active" aria-current="page" href="#"><i class="bi bi-box-arrow-left"></i> Salir</a>
@@ -99,7 +103,7 @@
             <img class="img-fluid w-100 mt-2" src="./assets/img/Portatiles-Gamer.png" alt="">
           </div>
           <div class="col-12 col-md-4 align-self-center">
-            <h3 class="text-light fw-bold">BIENVENIDO!</h3>
+            <h3 id="registrate" class="text-light fw-bold">BIENVENIDO!</h3>
             <P class="text-light">Somos una empresa colombiana, constituida en el año 2020 en la ciudad de Medellín, dedicada a la distribución de hardware y sistemas informáticos de última tecnología y de calidad reconocida. Brindando a nuestros clientes soluciones, asesoría, soporte y mantenimiento de sus equipos de cómputo. Ofreciendo una gran variedad de productos y unos precios altamente competitivos a nivel nacional.</P>
             <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-box-arrow-in-right me-2"></i>Regístrate</button>
           </div>
@@ -280,7 +284,7 @@
       <div class="row p-3 pb-2 bg-dark text-light">
         <div class="col-xs-12 col-md-6 col-lg-3">
           <a class="navbar-brand" href="#">
-            <img class="logo rounded-circle" src="./assets/img/LogoTiendaGamer.png" alt="" width="70">
+            <img class="logo rounded-circle" src="./assets/img/LogoTiendaGamer.png" alt="" width="100">
             <p class="h3 text-light">Tienda Gamer</p>
           </a>
           <p class="text-secondary">La Mejor Tienda de PC Gamers en Colombia.</p>

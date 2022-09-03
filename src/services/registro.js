@@ -25,8 +25,6 @@ botonRegistro.addEventListener("click", function(evento){
           timer: 2000
         })
         formulario.reset()
-        const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasExample')
-        bsOffcanvas.hide()
     })
   .catch((error) => {
     const errorCode = error.code;
