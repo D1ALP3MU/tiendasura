@@ -15,13 +15,17 @@ if (carrito == null) {
 
     let columna = document.createElement("div")
     columna.classList.add("col-12", "col-md-4")
+
+    let titulo = document.createElement("h4")
+    titulo.classList.add("text-center", "fw-bold", "text-secondary")
+    titulo.textContent = "Tu compra es 100% segura"
     
     let imagen = document.createElement("img")
     imagen.classList.add("img-fluid", "w-100")
-    imagen.src = "../../assets/img/carritoVacio.png"
+    imagen.src = "../../assets/img/carritoVacio2.png"
 
     let mensaje = document.createElement("h3")
-    mensaje.classList.add("text-secondary", "text-center", "fw-bold")
+    mensaje.classList.add("text-dark", "text-center", "fw-bold")
     mensaje.textContent = "Tu carrito está vacío..."
 
     let botonTienda = document.createElement("a")
@@ -37,6 +41,28 @@ if (carrito == null) {
     let botonFinalizarCompra = document.getElementById("btnFinalizarCompra")
     botonFinalizarCompra.classList.add("d-none")
 
+    let botonSeguirComprando = document.getElementById("btnSeguirComprando")
+    botonSeguirComprando.classList.add("d-none")
+
+    let encabezado = document.getElementById("header")
+    encabezado.classList.add("d-none")
+
+    let sesionCarousel = document.getElementById("sesionCarousel")
+    sesionCarousel.classList.add("d-none")
+
+    let divContainer = document.getElementById("divContainer")
+    divContainer.classList.add("d-none")
+
+    let lineaDivisora = document.getElementById("lineaDivisora")
+    lineaDivisora.classList.add("d-none")
+
+    let saltoLinea = document.getElementById("saltoLinea")
+    saltoLinea.classList.add("d-none")
+
+    let saltoLineaDos = document.getElementById("saltoLineaDos")
+    saltoLineaDos.classList.add("d-none")
+
+    columna.appendChild(titulo)
     columna.appendChild(imagen)
     columna.appendChild(mensaje)
     columna.appendChild(botonTienda)
@@ -125,3 +151,13 @@ if (carrito == null) {
     })
 }
 
+let botonSuscribir = document.getElementById("botonSuscribir")
+botonSuscribir.addEventListener("click", function(evento){
+    Swal.fire({
+        title: "Gracias por suscribirte a nuestro boletín.",
+        icon: "success",
+        timer: "5000",
+        toast: true,
+        position: "bottom-end" 
+    })
+})
