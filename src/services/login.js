@@ -4,7 +4,7 @@ let botonIngresar = document.getElementById("botonIngresar")
 
 botonIngresar.addEventListener("click", function(evento){
 
-evento.preventDefault()
+    evento.preventDefault()
     let userName = document.getElementById("inputName").value
     let userPassword = document.getElementById("inputPassword").value
 
@@ -12,7 +12,6 @@ evento.preventDefault()
     
 
     if (userName == "" || userPassword == "") {
-        // alert("Por favor llena los campos")
         Swal.fire({
             position: 'top-center',
             icon: 'error',
@@ -25,25 +24,25 @@ evento.preventDefault()
     else {
         console.log("Ingresaste")
         Swal.fire({
-            position: 'top-center',
-            icon: 'success',
-            title: 'Ingresaste datos',
-            showConfirmButton: false,
-            toast: true,
-            timer: 2000
+                position: 'top-center',
+                icon: 'success',
+                title: 'Ingresaste datos',
+                showConfirmButton: false,
+                toast: true,
+                timer: 2000
         })
     }
 })
 
-const auth = getAuth();
-signInWithEmailAndPassword(auth, email, password)
-.then((userCredential) => {
-// Signed in
-const user = userCredential.user;
-// ...
+// const auth = getAuth();
+// signInWithEmailAndPassword(auth, userName, userPassword)
+// .then((userCredential) => {
+// // Signed in
+// const user = userCredential.user;
+// // ...
 
-})
-.catch((error) => {
-const errorCode = error.code;
-const errorMessage = error.message;
-});
+// })
+// .catch((error) => {
+// const errorCode = error.code;
+// const errorMessage = error.message;
+// });
