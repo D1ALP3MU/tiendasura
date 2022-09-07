@@ -4,6 +4,10 @@ let totalCompra = document.getElementById("totalCompra")
 
 let factura = document.getElementById("factura")
 
+let botonConvertir = document.getElementById("btnConvertir")
+
+let botonSeguirComprando = document.getElementById("btnSeguirComprando")
+
 //COMPRUEBO EL ESTADO DEL CARRITO DE COMPRAS
 if (carrito == null) {
 
@@ -37,12 +41,9 @@ if (carrito == null) {
     botonTienda.addEventListener("click", function(){
         window.location.href = "./tienda.html"
     })
-
-    let botonFinalizarCompra = document.getElementById("btnFinalizarCompra")
-    botonFinalizarCompra.classList.add("d-none")
-
-    let botonSeguirComprando = document.getElementById("btnSeguirComprando")
+    
     botonSeguirComprando.classList.add("d-none")
+    botonSeguirComprando.style.cursor = "pointer"
 
     let encabezado = document.getElementById("header")
     encabezado.classList.add("d-none")
@@ -117,14 +118,30 @@ if (carrito == null) {
         acumuladorSubtotal = subtotalCalculado * producto.cantidad
         subTotales.push(parseInt(acumuladorSubtotal))
 
-        console.log(subTotales)
 
         //Se crea un ciclo (for of) para sumar los valores del array subtotales
         let sumaSubtotales = 0
         for (let i of subTotales) sumaSubtotales += i
-        console.log(sumaSubtotales)
         
         totalCompra.textContent =  "$" + sumaSubtotales
+        
+        //Se crea evento para convertir el valor de pesos a dólares
+        let estadoConvertir = 0
+        botonConvertir.textContent = "Convertir a USD"
+        botonConvertir.style.cursor = "pointer"
+        botonConvertir.addEventListener("click", function(evento){
+            if (estadoConvertir == 0) {
+                let convertir = sumaSubtotales / 4481.00
+                totalCompra.textContent = "US$" + convertir.toFixed(2)
+                estadoConvertir = 1
+                botonConvertir.textContent = "Convertir a COP"
+            } else {
+                totalCompra.textContent =  "$" + sumaSubtotales
+                botonConvertir.textContent = "Convertir a USD"
+                estadoConvertir = 0
+            }
+
+        })
 
         let botonLimpiarCarrito = document.getElementById("botonLimpiar")
         botonLimpiarCarrito.style.cursor = "pointer"
