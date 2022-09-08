@@ -1,4 +1,4 @@
-let productos = [
+let productosFiltro = [
 
     {
         nombre: "PORTATIL ASUS ROG G513 HF070 RYZEN 7 4800H 16G (2×8) 3200MHz NVMe 512G 4G RTX3050 15,6″ IPS 300Hz TC RGB W10",
@@ -86,78 +86,76 @@ let productos = [
     }
 ]
 
-let producto = JSON.parse(sessionStorage.getItem("producto"))
+let botonBuscar = document.getElementById("botonBuscar")
+botonBuscar.addEventListener("click", function(evento){
+    console.log("Estoy filtrando")
 
-//llamando al carrito de la memoria localStorage
-let carrito = JSON.parse(sessionStorage.getItem("carrito"))
-let totalCompra = document.getElementById("totalCompra")
-
-if (JSON.parse(sessionStorage.getItem("carrito")) != null) {
-    carrito = JSON.parse(sessionStorage.getItem("carrito"))
-    let pildora = document.getElementById("pildora")
-    pildora.textContent = carrito.length
-}
-
-let fila = document.getElementById("fila")
-
-//RECORRIENDO EL ARREGLO
-productos.forEach(function(producto){
+    let productoABuscar=document.getElementById("cajaBusqueda").value 
     
-    //Creando un div desde JS
-    let columna = document.createElement("div")
-    columna.classList.add("col")
+    let filtro = productosFiltro.filter(function(producto){
 
-    //Creando una tarjeta
-    let tarjeta = document.createElement("div")
-    tarjeta.classList.add("card", "shadow", "text-center", "h-100", "p5")
+        return(producto.nombre.toLowerCase().includes(productoABuscar.toLowerCase()))
 
-    //Creando una imagen
-    let imagen = document.createElement("img")
-    imagen.classList.add("img-fluid", "w-100")
-    imagen.src = producto.fotos[0]
-
-    //DETECTANDO EVENTO DEL MOUSE
-    imagen.addEventListener("mouseover", function(){
-        imagen.src = producto.fotos[1]
-        imagen.style.cursor = "pointer"
     })
-    imagen.addEventListener("mouseleave", function(){
+
+    let fila=document.getElementById("fila")
+    fila.innerHTML=""
+
+    filtro.forEach(function(producto){
+        //Creando un div desde JS
+        let columna = document.createElement("div")
+        columna.classList.add("col")
+
+        //Creando una tarjeta
+        let tarjeta = document.createElement("div")
+        tarjeta.classList.add("card", "shadow", "text-center", "h-100", "p5")
+
+        //Creando una imagen
+        let imagen = document.createElement("img")
+        imagen.classList.add("img-fluid", "w-100")
         imagen.src = producto.fotos[0]
-    })
-    imagen.addEventListener("mouseup", function(){
-        imagen.src = producto.fotos[0]
-        imagen.style.cursor = "pointer"
-    })
 
-    //Crear nombre
-    let nombre = document.createElement("h3")
-    nombre.classList.add("fw-bold")
-    nombre.textContent = producto.nombre    
-    
-    //Crear precio
-    let precio = document.createElement("h2")
-    precio.classList.add("fw-bold", "text-danger")
-    precio.textContent = ("$" + producto.precio)
+        //DETECTANDO EVENTO DEL MOUSE
+        imagen.addEventListener("mouseover", function(){
+            imagen.src = producto.fotos[1]
+            imagen.style.cursor = "pointer"
+        })
+        imagen.addEventListener("mouseleave", function(){
+            imagen.src = producto.fotos[0]
+        })
+        imagen.addEventListener("mouseup", function(){
+            imagen.src = producto.fotos[0]
+            imagen.style.cursor = "pointer"
+        })
 
-    //Crear popularidad
-    let popularidad = document.createElement("h4")
-    popularidad.classList.add("fw-bold", "d-none")
-    popularidad.textContent = producto.popularidad;
+        //Crear nombre
+        let nombre = document.createElement("h3")
+        nombre.classList.add("fw-bold")
+        nombre.textContent = producto.nombre    
+        
+        //Crear precio
+        let precio = document.createElement("h2")
+        precio.classList.add("fw-bold", "text-danger")
+        precio.textContent = ("$" + producto.precio)
 
-    //Creando la descripción
-    let descripcion = document.createElement("p")
-    descripcion.classList.add("text-danger", "d-none")
-    descripcion.textContent = producto.descripcion
-    
-    //Definiendo padres e hijos
-    tarjeta.appendChild(imagen)
-    tarjeta.appendChild(nombre)
-    tarjeta.appendChild(precio)
-    tarjeta.appendChild(popularidad)
-    tarjeta.appendChild(descripcion)
-    columna.appendChild(tarjeta)
-    fila.appendChild(columna)
+        //Crear popularidad
+        let popularidad = document.createElement("h4")
+        popularidad.classList.add("fw-bold", "d-none")
+        popularidad.textContent = producto.popularidad;
 
-}) 
-
-
+        //Creando la descripción
+        let descripcion = document.createElement("p")
+        descripcion.classList.add("text-danger", "d-none")
+        descripcion.textContent = producto.descripcion
+        
+        //Definiendo padres e hijos
+        tarjeta.appendChild(imagen)
+        tarjeta.appendChild(nombre)
+        tarjeta.appendChild(precio)
+        tarjeta.appendChild(popularidad)
+        tarjeta.appendChild(descripcion)
+        columna.appendChild(tarjeta)
+        fila.appendChild(columna)
+    }) 
+    evento.preventDefault()
+})

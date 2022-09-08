@@ -36,7 +36,7 @@ descripcion.textContent = producto.descripcion
 //Mostramos la popularidad real
 let popularidad = document.getElementById("popularidadInfo")
 popularidad.textContent = producto.popularidad;
-popularidad.classList.add("fw-bold")
+popularidad.classList.add("fw-bold", "d-none")
 
 //Redondeamos la popularidad para mostrar en las estrellas
 let valorProducto = Math.round(producto.popularidad)

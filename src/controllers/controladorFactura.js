@@ -139,7 +139,7 @@ if (carrito == null) {
         botonConvertir.style.cursor = "pointer"
         botonConvertir.addEventListener("click", function(evento){
             if (estadoConvertir == 0) {
-                let convertir = sumaSubtotales / 4480.10
+                let convertir = sumaSubtotales / 4446.36
                 totalCompra.textContent = "US$" + convertir.toFixed(2)
                 estadoConvertir = 1
                 botonConvertir.textContent = "Convertir a COP"
