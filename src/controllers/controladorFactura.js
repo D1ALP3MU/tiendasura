@@ -1,6 +1,14 @@
+let producto = JSON.parse(sessionStorage.getItem("producto"))
+
 //llamando al carrito de la memoria localStorage
 let carrito = JSON.parse(sessionStorage.getItem("carrito"))
 let totalCompra = document.getElementById("totalCompra")
+
+if (JSON.parse(sessionStorage.getItem("carrito")) != null) {
+    carrito = JSON.parse(sessionStorage.getItem("carrito"))
+    let pildora = document.getElementById("pildora")
+    pildora.textContent = carrito.length
+}
 
 let factura = document.getElementById("factura")
 
@@ -131,7 +139,7 @@ if (carrito == null) {
         botonConvertir.style.cursor = "pointer"
         botonConvertir.addEventListener("click", function(evento){
             if (estadoConvertir == 0) {
-                let convertir = sumaSubtotales / 4481.00
+                let convertir = sumaSubtotales / 4480.10
                 totalCompra.textContent = "US$" + convertir.toFixed(2)
                 estadoConvertir = 1
                 botonConvertir.textContent = "Convertir a COP"
@@ -140,7 +148,6 @@ if (carrito == null) {
                 botonConvertir.textContent = "Convertir a USD"
                 estadoConvertir = 0
             }
-
         })
 
         let botonLimpiarCarrito = document.getElementById("botonLimpiar")

@@ -86,6 +86,18 @@ let productos = [
     }
 ]
 
+let producto = JSON.parse(sessionStorage.getItem("producto"))
+
+//llamando al carrito de la memoria localStorage
+let carrito = JSON.parse(sessionStorage.getItem("carrito"))
+let totalCompra = document.getElementById("totalCompra")
+
+if (JSON.parse(sessionStorage.getItem("carrito")) != null) {
+    carrito = JSON.parse(sessionStorage.getItem("carrito"))
+    let pildora = document.getElementById("pildora")
+    pildora.textContent = carrito.length
+}
+
 let fila = document.getElementById("fila")
 
 //RECORRIENDO EL ARREGLO
@@ -131,7 +143,6 @@ productos.forEach(function(producto){
     let popularidad = document.createElement("h4")
     popularidad.classList.add("fw-bold", "d-none")
     popularidad.textContent = producto.popularidad;
-
 
     //Creando la descripción
     let descripcion = document.createElement("p")

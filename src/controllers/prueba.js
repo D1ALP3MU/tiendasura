@@ -1,13 +1,14 @@
-// let etiquetaBoton = document.getElementById("InputPassword1")
+let producto = JSON.parse(sessionStorage.getItem("producto"))
 
-// //PASOS PARA DETECTAR EVENTOS 
-// etiquetaBoton.addEventListener("click", function(){
-//     console.log("Estoy haciendo clic")
-//     let nombre = document.getElementById("nombre").value
-//     let saludo = document.getElementById("saludo")
-//     saludo.textContent = "Hola " + nombre + ", cómo estás?"
-    
-// })
+//llamando al carrito de la memoria localStorage
+let carrito = JSON.parse(sessionStorage.getItem("carrito"))
+let totalCompra = document.getElementById("totalCompra")
+
+if (JSON.parse(sessionStorage.getItem("carrito")) != null) {
+    carrito = JSON.parse(sessionStorage.getItem("carrito"))
+    let pildora = document.getElementById("pildora")
+    pildora.textContent = carrito.length
+}
 
 //Función para mosrtrar contraseña
 let checkPassword = document.getElementById("CheckPassword")
@@ -30,14 +31,3 @@ botonSuscribir.addEventListener("click", function(evento){
         position: "bottom-end" 
     })
 })
-
-
-//OTRA FORMA PARA MOSTRAR CONTRASEÑA
-// function mostrarContrasenia() {
-//     let password = document.getElementById("password")
-//     if(password.type == "password"){
-//         password.type = "text";
-//     }else{
-//         password.type = "password";
-//     }
-// }

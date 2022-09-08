@@ -1,3 +1,18 @@
+
+
+
+
+let producto = JSON.parse(sessionStorage.getItem("producto"))
+
+//llamando al carrito de la memoria localStorage
+let carrito = JSON.parse(sessionStorage.getItem("carrito"))
+
+if (JSON.parse(sessionStorage.getItem("carrito")) != null) {
+    carrito = JSON.parse(sessionStorage.getItem("carrito"))
+    let pildora = document.getElementById("pildora")
+    pildora.textContent = carrito.length
+}
+
 let botonSuscribir = document.getElementById("botonSuscribir")
 botonSuscribir.addEventListener("click", function(evento){
     Swal.fire({

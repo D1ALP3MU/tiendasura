@@ -13,7 +13,7 @@ botonIngresar.addEventListener("click", function(evento){
 
     if (userName == "" || userPassword == "") {
         Swal.fire({
-            position: 'top-center',
+            position: 'center',
             icon: 'error',
             title: 'Por favor llena los campos',
             showConfirmButton: false,
@@ -22,27 +22,29 @@ botonIngresar.addEventListener("click", function(evento){
         })
     }
     else {
-        console.log("Ingresaste")
-        Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: 'Ingresaste datos',
-                showConfirmButton: false,
-                toast: true,
-                timer: 2000
+
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, userName, userPassword)
+        .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+        window.location.href = "http://127.0.0.1:5500/index.html#"
         })
+        
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: errorMessage,
+            showConfirmButton: false,
+            toast: false,
+            timer: 2000
+        })
+        });
     }
+    formularioLogin.reset()
 })
 
-// const auth = getAuth();
-// signInWithEmailAndPassword(auth, userName, userPassword)
-// .then((userCredential) => {
-// // Signed in
-// const user = userCredential.user;
-// // ...
-
-// })
-// .catch((error) => {
-// const errorCode = error.code;
-// const errorMessage = error.message;
-// });
