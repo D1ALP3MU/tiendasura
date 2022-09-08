@@ -37,7 +37,8 @@ botonIngresar.addEventListener("click", function(evento){
         Swal.fire({
             position: 'center',
             icon: 'error',
-            title: "Usuario o contraseña incorrecto",
+            title: "Uuppss",
+            text: "Usuario no encontrado",
             showConfirmButton: false,
             toast: false,
             timer: 2000

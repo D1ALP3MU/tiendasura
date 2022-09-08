@@ -32,7 +32,7 @@ botonRegistro.addEventListener("click", function(evento){
     Swal.fire({
       icon: 'error',
       title: 'Uupps...',
-      text: "El correo o usuario ya existe",
+      text: "El correo o usuario ya existe, intenta nuevamente",
     })
     formulario.reset()
   });

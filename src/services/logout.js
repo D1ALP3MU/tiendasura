@@ -9,7 +9,7 @@ botonSalir.addEventListener("click", function(evento){
     signOut(auth).then(() => {
     // Sign-out successful.
     Swal.fire({
-        position: 'top-center',
+        position: 'center',
         icon: 'success',
         title: 'Gracias, hasta pronto',
         showConfirmButton: false,
