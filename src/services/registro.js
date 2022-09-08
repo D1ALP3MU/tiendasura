@@ -10,7 +10,6 @@ botonRegistro.addEventListener("click", function(evento){
     let password = document.getElementById("password").value
 
     let formulario = document.getElementById("formulario")
-
     const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -33,8 +32,9 @@ botonRegistro.addEventListener("click", function(evento){
     Swal.fire({
       icon: 'error',
       title: 'Uupps...',
-      text: errorCode + errorMessage,
+      text: "El correo o usuario ya existe",
     })
+    formulario.reset()
   });
 
 })

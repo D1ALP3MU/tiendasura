@@ -10,7 +10,6 @@ botonIngresar.addEventListener("click", function(evento){
 
     let formularioLogin = document.getElementById("fomularioLogin")
     
-
     if (userName == "" || userPassword == "") {
         Swal.fire({
             position: 'center',
@@ -38,7 +37,7 @@ botonIngresar.addEventListener("click", function(evento){
         Swal.fire({
             position: 'center',
             icon: 'error',
-            title: errorMessage,
+            title: "Usuario o contraseña incorrecto",
             showConfirmButton: false,
             toast: false,
             timer: 2000
