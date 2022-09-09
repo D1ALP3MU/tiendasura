@@ -148,7 +148,7 @@ productos.forEach(function(producto){
     let descripcion = document.createElement("p")
     descripcion.classList.add("text-danger", "d-none")
     descripcion.textContent = producto.descripcion
-    
+
     //Definiendo padres e hijos
     tarjeta.appendChild(imagen)
     tarjeta.appendChild(nombre)

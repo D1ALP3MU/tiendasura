@@ -86,14 +86,15 @@ let productosFiltro = [
     }
 ]
 
+//Se crea evento para filtrar un producto en específico según lo que escriba el usuario
 let botonBuscar = document.getElementById("botonBuscar")
 botonBuscar.addEventListener("click", function(evento){
-    console.log("Estoy filtrando")
 
     let productoABuscar=document.getElementById("cajaBusqueda").value 
     
     let filtro = productosFiltro.filter(function(producto){
 
+        //se agrega funcion toLowerCase() para que todo el texto que se ingrese se tome en minuscula 
         return(producto.nombre.toLowerCase().includes(productoABuscar.toLowerCase()))
 
     })
