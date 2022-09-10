@@ -28,7 +28,7 @@ botonIngresar.addEventListener("click", function(evento){
         // Signed in
         const user = userCredential.user;
         // ...
-        window.location.href = "http://127.0.0.1:5500/index.html#"
+        window.location.href = "../../index.html"
         })
         
         .catch((error) => {

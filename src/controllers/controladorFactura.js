@@ -133,13 +133,13 @@ if (carrito == null) {
         
         totalCompra.textContent =  "$" + sumaSubtotales
         
-        //Se crea evento para convertir el valor de pesos a dólares
+        //Se crea evento para convertir el valor de pesos a dólares y viceversa utilizando el metodo bandera
         let estadoConvertir = 0
         botonConvertir.textContent = "Convertir a USD"
         botonConvertir.style.cursor = "pointer"
         botonConvertir.addEventListener("click", function(evento){
             if (estadoConvertir == 0) {
-                let convertir = sumaSubtotales / 4446.36
+                let convertir = sumaSubtotales / 4396.69
                 totalCompra.textContent = "US$" + convertir.toFixed(2)
                 estadoConvertir = 1
                 botonConvertir.textContent = "Convertir a COP"
