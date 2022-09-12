@@ -3,10 +3,11 @@ let contenedorProductos = document.getElementById("fila")
 //Escucho click en la fila
 let informacionProducto = {}
 contenedorProductos.addEventListener("click", function(evento){
+    console.log("hola")
     if(evento.target.classList.contains("img-fluid")){
-        informacionProducto.nombre = (evento.target.parentElement.querySelector("h3").textContent)
+        informacionProducto.nombre = (evento.target.parentElement.querySelector("h4").textContent)
         informacionProducto.precio = (evento.target.parentElement.querySelector("h2").textContent)
-        informacionProducto.popularidad = (evento.target.parentElement.querySelector("h4").textContent)
+        informacionProducto.popularidad = (evento.target.parentElement.querySelector("h5").textContent)
         informacionProducto.descripcion = (evento.target.parentElement.querySelector("p").textContent)
         informacionProducto.foto = (evento.target.parentElement.querySelector("img").src)
         
@@ -16,7 +17,6 @@ contenedorProductos.addEventListener("click", function(evento){
 
         //Error que se puede cometer
         //localStorage.setItem(JSON.stringify("producto", informacionProducto))
-
 
         window.location.href = "./ampliarInfo.html"
         

@@ -39,6 +39,7 @@ if (carrito == null) {
     let mensaje = document.createElement("h3")
     mensaje.classList.add("text-dark", "text-center", "fw-bold")
     mensaje.textContent = "Tu carrito está vacío..."
+    console.log(mensaje)
 
     let botonTienda = document.createElement("a")
     botonTienda.classList.add("nav", "nav-pointer", "fw-bold", "mt-4", "justify-content-center", "my-5")
@@ -64,12 +65,6 @@ if (carrito == null) {
 
     let lineaDivisora = document.getElementById("lineaDivisora")
     lineaDivisora.classList.add("d-none")
-
-    let saltoLinea = document.getElementById("saltoLinea")
-    saltoLinea.classList.add("d-none")
-
-    let saltoLineaDos = document.getElementById("saltoLineaDos")
-    saltoLineaDos.classList.add("d-none")
 
     columna.appendChild(titulo)
     columna.appendChild(imagen)
@@ -118,20 +113,22 @@ if (carrito == null) {
         subtotal.classList.add("fw-bold", "text-center", "bg-dark", "text-light")
 
         let subtotalCalculado = producto.precio.split("$")[1]
-
-        subtotal.textContent = "$" + subtotalCalculado * producto.cantidad
-
+    
         //Se utiliza el método push() para agragar valores al array subtotales
         let acumuladorSubtotal
-        acumuladorSubtotal = subtotalCalculado * producto.cantidad
-        subTotales.push(parseInt(acumuladorSubtotal))
+        acumuladorSubtotal = subtotalCalculado * producto.cantidad  
+        console.log(acumuladorSubtotal)
+        subTotales.push(acumuladorSubtotal)
 
+        //Se usa la funcion toLocalString para agregar los puntos de separacion miles al subtotal de la compra
+        subtotal.textContent = "$" + acumuladorSubtotal.toLocaleString('de-DE')
 
         //Se crea un ciclo (for of) para sumar los valores del array subtotales
         let sumaSubtotales = 0
         for (let i of subTotales) sumaSubtotales += i
         
-        totalCompra.textContent =  "$" + sumaSubtotales
+        //Se usa la funcion toLocalString para agregar los puntos de separacion miles al total de la compra
+        totalCompra.textContent = "$" + sumaSubtotales.toLocaleString('de-DE') +" COP";
         
         //Se crea evento para convertir el valor de pesos a dólares y viceversa utilizando el metodo bandera
         let estadoConvertir = 0
@@ -139,12 +136,13 @@ if (carrito == null) {
         botonConvertir.style.cursor = "pointer"
         botonConvertir.addEventListener("click", function(evento){
             if (estadoConvertir == 0) {
-                let convertir = sumaSubtotales / 4396.69
-                totalCompra.textContent = "US$" + convertir.toFixed(2)
+                let convertir = sumaSubtotales / 4365.32  
+                totalCompra.textContent = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(convertir) + "US";
                 estadoConvertir = 1
                 botonConvertir.textContent = "Convertir a COP"
             } else {
-                totalCompra.textContent =  "$" + sumaSubtotales
+                //Se usa la funcion toLocalString para agregar los puntos de separacion miles al total de la compra
+                totalCompra.textContent = "$" + sumaSubtotales.toLocaleString('de-DE') + " COP";
                 botonConvertir.textContent = "Convertir a USD"
                 estadoConvertir = 0
             }
