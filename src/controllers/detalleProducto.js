@@ -71,20 +71,32 @@ botonCarrito.addEventListener("click", function(evento) {
     let cantidad = document.getElementById("cantidadProducto")
     cantidad = cantidad.value
 
-    //Agregamos la cantidad al objeto producto
-    producto.cantidad = cantidad
-    console.log(producto)
+    //Creamos condición para que la cantidad que siempre sea mayor a cero
+    if (cantidad > 0) {
+        //Agregamos la cantidad al objeto producto
+        producto.cantidad = cantidad
+        console.log(producto)
 
-    //Agregamos el producto al carrito de compras
-    carrito.push(producto)
-    console.log(carrito)
+        //Agregamos el producto al carrito de compras
+        carrito.push(producto)
+        console.log(carrito)
 
-    //Agregando el carrito a la memoria
-    sessionStorage.setItem("carrito", JSON.stringify(carrito))
+        //Agregando el carrito a la memoria
+        sessionStorage.setItem("carrito", JSON.stringify(carrito))
 
-    //Pintando la pildora con la cantidad de productos
-    let cantidadCarrito = carrito.length
-    pildora.textContent = cantidadCarrito
+        //Pintando la pildora con la cantidad de productos
+        let cantidadCarrito = carrito.length
+        pildora.textContent = cantidadCarrito
+    } else {
+        Swal.fire({
+            title: "Debes ingresar una cantidad superior a cero.",
+            icon: "error",
+            timer: "3000",
+            toast: true,
+            position: "center" 
+        })
+    }
+
 })
 
 

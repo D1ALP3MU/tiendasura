@@ -1,7 +1,3 @@
-
-
-
-
 let producto = JSON.parse(sessionStorage.getItem("producto"))
 
 //llamando al carrito de la memoria localStorage
@@ -24,6 +20,8 @@ botonSuscribir.addEventListener("click", function(evento){
     })
 })
 
+let formularioContacto = document.getElementById("formularioContacto")
+
 let botonContactanos = document.getElementById("btnContactanos")
 botonContactanos.addEventListener("click", function(evento){
     Swal.fire({
@@ -41,4 +39,5 @@ botonContactanos.addEventListener("click", function(evento){
         popup: 'animate__animated animate__fadeOutUp'
         }
     })
+    formularioContacto.reset()
 })
