@@ -145,7 +145,7 @@ if (carrito == null) {
         botonConvertir.style.cursor = "pointer"
         botonConvertir.addEventListener("click", function(evento){
             if (estadoConvertir == 0) {
-                let convertir = sumaSubtotales / 4365.32  
+                let convertir = sumaSubtotales / 4346.91  
                 totalCompra.textContent = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(convertir) + "US";
                 estadoConvertir = 1
                 botonConvertir.textContent = "Convertir a COP"

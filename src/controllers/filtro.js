@@ -214,17 +214,20 @@ botonBuscar.addEventListener("click", function(evento){
         })
 
         //Crear nombre
-        let nombre = document.createElement("h3")
+        let nombre = document.createElement("h4")
         nombre.classList.add("fw-bold")
-        nombre.textContent = producto.nombre    
+        nombre.textContent = producto.nombre 
         
+            //Agrego los puntos de los miles al precio del producto con el metodo toLocaleString('de-DE')
+        let valorMiles = producto.precio
+    
         //Crear precio
         let precio = document.createElement("h2")
         precio.classList.add("fw-bold", "text-danger")
-        precio.textContent = ("$" + producto.precio)
-
+        precio.textContent = "$" + valorMiles.toLocaleString('de-DE')
+        
         //Crear popularidad
-        let popularidad = document.createElement("h4")
+        let popularidad = document.createElement("h5")
         popularidad.classList.add("fw-bold", "d-none")
         popularidad.textContent = producto.popularidad;
 
