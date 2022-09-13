@@ -113,15 +113,24 @@ if (carrito == null) {
         subtotal.classList.add("fw-bold", "text-center", "bg-dark", "text-light")
 
         let subtotalCalculado = producto.precio.split("$")[1]
+        console.log(subtotalCalculado)
+
+        //Convirtiendo el subtotalCalculado de string a entero para calcular el subtotal
+        //con el metodo split le quito los puntos de miles y automaticamente se convierte en un arreglo
+        let puntosMiles = subtotalCalculado.split(".")
+
+        //concateno el arreglo para poder formar el precio de producto con un ciclo (for of) y calcular el subtotal
+        let concatArray = 0 
+        for (let k of puntosMiles) concatArray += k
+
+        //calculo el subtotal
+        let resultadoSubtotal = concatArray * producto.cantidad
     
-        //Se utiliza el método push() para agragar valores al array subtotales
-        let acumuladorSubtotal
-        acumuladorSubtotal = subtotalCalculado * producto.cantidad  
-        console.log(acumuladorSubtotal)
-        subTotales.push(acumuladorSubtotal)
+        //Se utiliza el método push() para agragar valores al array subtotales 
+        subTotales.push(resultadoSubtotal)
 
         //Se usa la funcion toLocalString para agregar los puntos de separacion miles al subtotal de la compra
-        subtotal.textContent = "$" + acumuladorSubtotal.toLocaleString('de-DE')
+        subtotal.textContent = "$" + resultadoSubtotal.toLocaleString('de-DE')
 
         //Se crea un ciclo (for of) para sumar los valores del array subtotales
         let sumaSubtotales = 0
