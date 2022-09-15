@@ -172,6 +172,9 @@ let productosFiltro = [
 
 //Se crea evento para filtrar un producto en específico según lo que escriba el usuario
 let botonBuscar = document.getElementById("botonBuscar")
+
+let formularioBusqueda = document.getElementById("formSearch")
+
 botonBuscar.addEventListener("click", function(evento){
     
     let productoABuscar=document.getElementById("cajaBusqueda").value 
@@ -180,7 +183,7 @@ botonBuscar.addEventListener("click", function(evento){
 
         //se agrega funcion toLowerCase() para que todo el texto que se ingrese se tome en minuscula 
         return(producto.nombre.toLowerCase().includes(productoABuscar.toLowerCase()))
-        
+
     })
 
     let fila=document.getElementById("fila")
@@ -246,4 +249,5 @@ botonBuscar.addEventListener("click", function(evento){
         fila.appendChild(columna)
     }) 
     evento.preventDefault()
+    formularioBusqueda.reset()
 })

@@ -3,7 +3,6 @@ let contenedorProductos = document.getElementById("fila")
 //Escucho click en la fila
 let informacionProducto = {}
 contenedorProductos.addEventListener("click", function(evento){
-    console.log("hola")
     if(evento.target.classList.contains("img-fluid")){
         informacionProducto.nombre = (evento.target.parentElement.querySelector("h4").textContent)
         informacionProducto.precio = (evento.target.parentElement.querySelector("h2").textContent)
@@ -22,7 +21,6 @@ contenedorProductos.addEventListener("click", function(evento){
         
     }
 })
-
 
 let botonSuscribir = document.getElementById("botonSuscribir")
 botonSuscribir.addEventListener("click", function(evento){
