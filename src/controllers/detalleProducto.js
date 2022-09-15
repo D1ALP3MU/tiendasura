@@ -72,9 +72,9 @@ botonCarrito.addEventListener("click", function(evento) {
     cantidad = cantidad.value
 
     //Creamos condición para que la cantidad que siempre sea mayor a cero
-    if (cantidad > 0) {
-        //Agregamos la cantidad al objeto producto
-        producto.cantidad = cantidad
+    if (cantidad >= 1) {
+        //Agregamos la cantidad al objeto producto y utilizamos el metodo Math.trunc para devolver la parte entera de un número eliminando cualquier dígito fraccionario.
+        producto.cantidad = Math.trunc(cantidad)
         console.log(producto)
 
         //Agregamos el producto al carrito de compras
@@ -89,7 +89,7 @@ botonCarrito.addEventListener("click", function(evento) {
         pildora.textContent = cantidadCarrito
     } else {
         Swal.fire({
-            title: "Debes ingresar una cantidad superior a cero.",
+            title: "Debes ingresar una cantidad correcta.",
             icon: "error",
             timer: "3000",
             toast: true,
