@@ -113,7 +113,6 @@ if (carrito == null) {
         subtotal.classList.add("fw-bold", "text-center", "bg-dark", "text-light")
 
         let subtotalCalculado = producto.precio.split("$")[1]
-        console.log(subtotalCalculado)
 
         //Convirtiendo el subtotalCalculado de string a entero para calcular el subtotal
         //con el metodo split le quito los puntos de miles y automaticamente se convierte en un arreglo
@@ -145,7 +144,7 @@ if (carrito == null) {
         botonConvertir.style.cursor = "pointer"
         botonConvertir.addEventListener("click", function(evento){
             if (estadoConvertir == 0) {
-                let convertir = sumaSubtotales / 4346.91  
+                let convertir = sumaSubtotales / 4415.11  
                 totalCompra.textContent = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(convertir) + "US";
                 estadoConvertir = 1
                 botonConvertir.textContent = "Convertir a COP"
